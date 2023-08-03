@@ -12,7 +12,7 @@ def main():
         displayResult()
 #---------------------------------------Functions
 def openText():
-    file = open("/User/willdelaney/Desktop/tools/searchText.txt", "r") 
+    file = open("/User/"USER"/Desktop/searchText.txt", "r") 
     text = file.readlines()
     for line in text:
         FullText.append(line)
