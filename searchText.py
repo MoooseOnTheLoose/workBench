@@ -12,6 +12,7 @@ def main():
         displayResult()
 #---------------------------------------Functions
 def openText():
+    #Change and comfirm file lovcation 
     file = open("/User/"USER"/Desktop/searchText.txt", "r") 
     text = file.readlines()
     for line in text:
