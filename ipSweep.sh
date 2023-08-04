@@ -18,4 +18,5 @@ fi
 echo "........................."
 echo " "
 
+##::CMD:: arp -a
 ##::CMD:: for /l %i in (1,1,254) do @ping -n 1 -w 100 192.168.1.%i | findstr "Reply"
