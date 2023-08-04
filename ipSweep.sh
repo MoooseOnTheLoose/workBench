@@ -1,5 +1,6 @@
 #!/bin/bash
 ## Take input from user for IP Address Network
+echo " "
 echo "........................."
 echo "...:Scanning IP Range:..."
 echo "........................."
