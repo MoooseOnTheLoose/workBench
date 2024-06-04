@@ -80,4 +80,8 @@ def displayResult():
         print('No social-security numbers found'.center(60))
     print('-' * 45 + '\n')
 
-main()
+if __name__ == '__main__':
+	try:
+		main()
+	except KeyboardInterrupt:
+		exit()
