@@ -242,12 +242,12 @@ def callGame():
             if tcpUDP == 1:
                 question = random.choice(list(LISTTCP.values()))
                 answer = input(f"What is TCP port {question}? " )
-                print("The answer is " + list(LISTTCP.keys())[list(LISTTCP.values()).index(question)] + ".")
+                print("The answer is: " + list(LISTTCP.keys())[list(LISTTCP.values()).index(question)] + ".")
                 callGame()
             else:
                 question = random.choice(list(lISTUDP.values()))
                 answer = input(f"What is UDP port {question}? " )
-                print("The answer is " + list(lISTUDP.keys())[list(lISTUDP.values()).index(question)] + ".")
+                print("The answer is: " + list(lISTUDP.keys())[list(lISTUDP.values()).index(question)] + ".")
                 callGame()         
         elif ask.lower() == "b" or ask.lower() == "back":
             questionUser()
