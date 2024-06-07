@@ -236,17 +236,17 @@ def callGame():
     print("")
     count = 0
     while count <= 3:
-        ask = input("(P)lay? (B)ack? ")
+        ask = input("(P)lay? (B)ack?" + '\n')
         if ask.lower() == "p" or ask.lower() == "play": 
             tcpUDP = random.randint(1, 2)
             if tcpUDP == 1:
                 question = random.choice(list(LISTTCP.values()))
-                answer = input(f"What is TCP port {question}? " )
+                answer = input(f"What is TCP port {question} ? " )
                 print("The answer is: " + list(LISTTCP.keys())[list(LISTTCP.values()).index(question)] + ".")
                 callGame()
             else:
                 question = random.choice(list(lISTUDP.values()))
-                answer = input(f"What is UDP port {question}? " )
+                answer = input(f"What is UDP port {question} ? " )
                 print("The answer is: " + list(lISTUDP.keys())[list(lISTUDP.values()).index(question)] + ".")
                 callGame()         
         elif ask.lower() == "b" or ask.lower() == "back":
