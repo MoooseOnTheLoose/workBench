@@ -1,5 +1,4 @@
-# Warning
-# Intended for educational purposes only
+# Warning. Intended for educational purposes only.
 import re
 #----------------------------------------Globals
 FullText = [ ]
