@@ -12,7 +12,7 @@ class Protocol:
 #---GLOBALS
 LISTTCP = {'FTP':21, 'SSH':22, 'TELNET':23, 'SMPT':25, 'DNS':53, 'HTTP':80, 'POP3':110, 'RPCBIND':111, 'MSRPC':135, 'NETBIOS SSN':139, 'IMAP':143,
            'HTTPS':443, 'MICROSOFT DS':445, 'IMAPS':993, 'POP3S':995, 'PPTP':1723, 'MYSQL':3306, 'MS TERM SERVER':3389, 'VNC':5900, 'HTTP PROXY':8080}
-lISTUDP = {'DNS':53,'DHCPS':67, 'DHCPC':68,'TFTP':69, 'NTP':123, 'MSRPC':135, 'NETBIOS NS':137, 'NETBIOS DGM':138, 'NETBIOS SSN':139,
+LISTUDP = {'DNS':53,'DHCPS':67, 'DHCPC':68,'TFTP':69, 'NTP':123, 'MSRPC':135, 'NETBIOS NS':137, 'NETBIOS DGM':138, 'NETBIOS SSN':139,
             'SNMP':161, 'SNMPTRAP':162, 'MICROSOFT DS':445, 'ISAKMP':500, 'SYSLOG':514, 'RIP':520, 'IPP':631, 'MS SQL DS':1434, 
             'UPNP':1900, 'NAT T IKE':4500, 'VARIES':49152} 
 def main():
@@ -223,7 +223,7 @@ def udpPorts():
             questionUser() 
         elif answer.lower() == "list" or answer.lower() == "l":
             print("")
-            for key, value in lISTUDP.items():
+            for key, value in LISTUDP.items():
                 print(key, value)
             print(" ")  
         elif answer.lower() == "q" or answer.lower() == "quit":
@@ -245,9 +245,9 @@ def callGame():
                 print("The answer is: " + list(LISTTCP.keys())[list(LISTTCP.values()).index(question)] + ".")
                 callGame()
             else:
-                question = random.choice(list(lISTUDP.values()))
+                question = random.choice(list(LISTUDP.values()))
                 answer = input(f"What is UDP port {question} ? " )
-                print("The answer is: " + list(lISTUDP.keys())[list(lISTUDP.values()).index(question)] + ".")
+                print("The answer is: " + list(LISTUDP.keys())[list(LISTUDP.values()).index(question)] + ".")
                 callGame()         
         elif ask.lower() == "b" or ask.lower() == "back":
             questionUser()
