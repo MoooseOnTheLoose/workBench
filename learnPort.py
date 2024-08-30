@@ -122,7 +122,7 @@ def tcpPorts():
         elif answer.lower() == "http-proxy" or answer.lower() == "http_proxy" or answer.lower() == ("http proxy") or answer.lower() == ("httpproxy") or answer == str(8080):  
             str(httpProxy.getProtocolInfo())
             count = 0
-        elif answer.lower() == "b":
+        elif answer.lower() == "b" or answer.lower() == "back":
             questionUser()
         elif answer.lower() == "list" or answer.lower() == "l":
             print("")
@@ -219,7 +219,7 @@ def udpPorts():
         elif answer.lower() == "emphemeral" or answer == str(49152):
             str(ephemeral.getProtocolInfo())
             count = 0 
-        elif answer.lower() == "b":
+        elif answer.lower() == "b" or answer.lower() == "back":
             questionUser() 
         elif answer.lower() == "list" or answer.lower() == "l":
             print("")
