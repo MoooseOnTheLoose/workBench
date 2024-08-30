@@ -1,4 +1,3 @@
-# Warning. Intended for educational purposes only.
 import re
 #----------------------------------------Globals
 FullText = [ ]
