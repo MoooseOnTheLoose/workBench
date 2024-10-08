@@ -2,7 +2,7 @@ import dns.reversename #pip3 install dnspython
 def main():
     reverseDNS()
 def reverseDNS():
-    domain = dns.reversename.from_address("142.250.31.101")
+    domain = dns.reversename.from_address("172.253.63.100")
     print(domain)
     print(dns.reversename.to_address(domain))  
 if __name__ == "__main__":
