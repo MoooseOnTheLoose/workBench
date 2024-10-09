@@ -16,7 +16,7 @@ def main(domain):
         try:
             responses = dns.resolver.resolve(domain, record)
             print("\nRecord response ",record)
-            print("-" * 63)
+            print("-" * 36)
             for response in responses:
                 print(response)
         except Exception as exception:
