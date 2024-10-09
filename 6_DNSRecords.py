@@ -8,7 +8,7 @@ MAIL SERVERS = MX
 NAMER SERVERS = NS
 Pointer Record = PTR
 State of Authority = SOA
-Text = txt
+Text = TXT
 '''
 def main(domain):
     records = ['A','AAAA','CNAME','MX','NS','PTR','SOA','TXT']
