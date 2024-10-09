@@ -12,7 +12,7 @@ def resolveDNS():
     hosts = ["google.com", "microsoft.com"]
     for host in hosts:
         print("\n" + host)
-        ip = dns.resolver.resolve(host, "A") 
+        ip = dns.resolver.resolve(host, "NS") 
         for i in ip:
             print(i)      
 if __name__ == "__main__":
