@@ -6,9 +6,9 @@ class Protocol:
         self.number = number
         self.description = description
     def getProtocolInfo(self):
-        print("")
+        print()
         print(f"{self.name} - {self.number} - {self.description}")
-        print("")
+        print()
 #---GLOBALS
 LISTTCP = {'FTP':21, 'SSH':22, 'TELNET':23, 'SMPT':25, 'DNS':53, 'HTTP':80, 'POP3':110, 'RPCBIND':111, 'MSRPC':135, 'NETBIOS SSN':139, 'IMAP':143,
            'HTTPS':443, 'MICROSOFT DS':445, 'IMAPS':993, 'POP3S':995, 'PPTP':1723, 'MYSQL':3306, 'MS TERM SERVER':3389, 'VNC':5900, 'HTTP PROXY':8080}
@@ -16,7 +16,7 @@ LISTUDP = {'DNS':53,'DHCPS':67, 'DHCPC':68,'TFTP':69, 'NTP':123, 'MSRPC':135, 'N
             'SNMP':161, 'SNMPTRAP':162, 'MICROSOFT DS':445, 'ISAKMP':500, 'SYSLOG':514, 'RIP':520, 'IPP':631, 'MS SQL DS':1434, 
             'UPNP':1900, 'NAT T IKE':4500, 'VARIES':49152} 
 def main():
-    print("")
+    print()
     questionUser()
        
 def questionUser():
