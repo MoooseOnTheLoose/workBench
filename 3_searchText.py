@@ -4,6 +4,7 @@ FullText = [ ]
 CollectionPhone = [ ]
 CollectionEmail = [ ]
 CollectionSocial = [ ]
+# FOR EDUCATIONAL USE
 def main():
         openText()
         checkEmail(FullText)
