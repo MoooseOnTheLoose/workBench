@@ -1,5 +1,4 @@
 import random
-
 # Description of 20 common TCP ports and 20 common UDP ports with a study game
 class Protocol:
     def __init__(self, name, number, description):
@@ -11,34 +10,26 @@ class Protocol:
         print()
         print(f"{self.name} - {self.number} - {self.description}")
         print()
-
-
 # --- GLOBALS
 LISTTCP = {
     'FTP': 21, 'SSH': 22, 'TELNET': 23, 'SMTP': 25, 'DNS': 53, 'HTTP': 80, 'POP3': 110, 'RPCBIND': 111,
     'MSRPC': 135, 'NETBIOS SSN': 139, 'IMAP': 143, 'HTTPS': 443, 'MICROSOFT DS': 445, 'IMAPS': 993,
     'POP3S': 995, 'PPTP': 1723, 'MYSQL': 3306, 'MS TERM SERVER': 3389, 'VNC': 5900, 'HTTP PROXY': 8080
 }
-
 LISTUDP = {
     'DNS': 53, 'DHCPS': 67, 'DHCPC': 68, 'TFTP': 69, 'NTP': 123, 'MSRPC': 135, 'NETBIOS NS': 137,
     'NETBIOS DGM': 138, 'NETBIOS SSN': 139, 'SNMP': 161, 'SNMPTRAP': 162, 'MICROSOFT DS': 445,
     'ISAKMP': 500, 'SYSLOG': 514, 'RIP': 520, 'IPP': 631, 'MS SQL DS': 1434, 'UPNP': 1900,
     'NAT T IKE': 4500, 'VARIES': 49152
 }
-
-
 def main():
     print()
     questionUser()
-
-
 def questionUser():
     count = 0
     while count <= 3:
         print('-' * 23)
         ask = input("(G)ame? (Q)uit?\nUDP or TCP ports? ").strip().lower()
-
         if ask == "tcp":
             print('-' * 23)
             tcpPorts()
@@ -53,8 +44,6 @@ def questionUser():
         else:
             print("Incorrect input. Try again.")
             count += 1
-
-
 def tcpPorts():
     ftp = Protocol("FTP", 21, "File Transfer Protocol")
     ssh = Protocol("SSH", 22, "Secure Shell")
@@ -76,11 +65,9 @@ def tcpPorts():
     msTermServer = Protocol("MS TERM SERVER", 3389, "Microsoft Terminal Services port")
     vnc = Protocol("VNC", 5900, "A Graphical Desktop Sharing System")
     httpProxy = Protocol("HTTP PROXY", 8080, "Commonly Used For HTTP Proxies")
-
     count = 0
     while count <= 3:
         answer = input("(B)ack? (L)ist? (Q)uit?\n-- Which TCP protocol: ").strip().lower()
-
         if answer == "ftp" or answer == "21":
             ftp.getProtocolInfo(); count = 0
         elif answer == "ssh" or answer == "22":
@@ -134,8 +121,6 @@ def tcpPorts():
         else:
             print("Incorrect input. Try again")
             count += 1
-
-
 def udpPorts():
     dns_p = Protocol("DNS", 53, "Domain Name Systems Server")
     dhcps = Protocol("DHCPS", 67, "Dynamic Host Configuration Protocol Server")
@@ -157,11 +142,9 @@ def udpPorts():
     upnp = Protocol("UPNP", 1900, "Simple Service Discovery Protocol (SSDP)")
     natTIKE = Protocol("NAT T IKE", 4500, "NAT traversal during IPsec IKE")
     ephemeral = Protocol("Varies", 49152, "Start of IANA dynamic/private (ephemeral) range")
-
     count = 0
     while count <= 3:
         answer = input("(B)ack? (L)ist? (Q)uit?\n-- Which UDP protocol: ").strip().lower()
-
         if answer == "dns" or answer == "53":
             dns_p.getProtocolInfo(); count = 0
         elif answer == "dhcps" or answer == "67":
@@ -215,13 +198,9 @@ def udpPorts():
         else:
             print("Incorrect input. Try again")
             count += 1
-
-
 def _normalize(s: str) -> str:
     """Normalize user input for loose matching."""
     return " ".join(s.strip().lower().replace("_", " ").replace("-", " ").split())
-
-
 def callGame():
     """
     Point system:
@@ -231,28 +210,22 @@ def callGame():
     """
     score = 0
     total = 0
-
     # Precompute normalized lookup maps for faster and looser matching.
     tcp_name_by_port = {v: k for k, v in LISTTCP.items()}
     udp_name_by_port = {v: k for k, v in LISTUDP.items()}
-
     tcp_norm_to_name = {_normalize(k): k for k in LISTTCP.keys()}
     udp_norm_to_name = {_normalize(k): k for k in LISTUDP.keys()}
-
     while True:
         print()
         print(f"Score: {score}/{total}")
         ask = input("(P)lay? (R)eset score? (B)ack?\n").strip().lower()
-
         if ask in ("p", "play"):
             total += 1
             tcpUDP = random.randint(1, 2)
-
             if tcpUDP == 1:
                 question_port = random.choice(list(LISTTCP.values()))
                 correct_name = tcp_name_by_port[question_port]
                 user = input(f"What is TCP port {question_port}? ").strip()
-
                 # Accept either correct name (loose) OR the correct port typed back.
                 user_norm = _normalize(user)
                 is_correct = (
@@ -265,7 +238,6 @@ def callGame():
                     print("Correct.")
                 else:
                     print(f"Incorrect. Answer: {correct_name}.")
-
             else:
                 question_port = random.choice(list(LISTUDP.values()))
                 correct_name = udp_name_by_port[question_port]
@@ -276,25 +248,19 @@ def callGame():
                     user_norm == _normalize(correct_name)
                     or (user.strip().isdigit() and int(user.strip()) == question_port)
                 )
-
                 if is_correct:
                     score += 1
                     print("Correct.")
                 else:
                     print(f"Incorrect. Answer: {correct_name}.")
-
         elif ask in ("r", "reset"):
             score = 0
             total = 0
             print("Score reset.")
-
         elif ask in ("b", "back"):
             return
-
         else:
             print("Incorrect input. Try again")
-
-
 if __name__ == "__main__":
     try:
         main()
