@@ -1,7 +1,6 @@
 import random
 
-# Description of 20 common TCP ports and 20 common UDP ports with a study game + point system.
-
+# Description of 20 common TCP ports and 20 common UDP ports with a study game
 class Protocol:
     def __init__(self, name, number, description):
         self.name = name
