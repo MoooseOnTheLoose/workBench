@@ -50,7 +50,7 @@ SCALES = {
     "a# major": ["a#", "b#", "c##", "d#", "e#", "f##", "g##"],
     "a# minor": ["a#", "b#", "c#", "d#", "e#", "f#", "g#"],
 
-    "b# major": ["b#", "c##", "d##", "e#", "f##", "g##", "a##"],  # FIXED
+    "b# major": ["b#", "c##", "d##", "e#", "f##", "g##", "a##"],
     "b# minor": ["b#", "c##", "d#", "e#", "f##", "g#", "a#"],
 
     # Flat keys
@@ -119,7 +119,7 @@ CHORDS = {
     "f# minor": ["f#", "a", "c#"],
     "gb minor": ["g♭", "b♭♭", "d♭"],
     "g# minor": ["g#", "b", "d#"],
-    "ab minor": ["a♭", "c♭", "e♭"],   # FIXED
+    "ab minor": ["a♭", "c♭", "e♭"], 
     "a# minor": ["a#", "c#", "e#"],
     "bb minor": ["b♭", "d♭", "f"],
     "b# minor": ["b#", "d#", "f##"],
