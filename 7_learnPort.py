@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import random
 # Description of 20 common TCP ports and 20 common UDP ports with a study game
 class Protocol:
