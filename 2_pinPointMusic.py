@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # pinPointMusic_1.1_skeleton.py
 
 from dataclasses import dataclass 
