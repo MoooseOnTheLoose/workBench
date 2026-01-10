@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # Example run:
-#   python3 pii_scan.py ./searchText.txt
-#   python3 pii_scan.py ./searchText.txt --no-mask
-#   python3 pii_scan.py ./searchText.txt --max-results 1000
-#   python3 pii_scan.py ./searchText.txt --encoding latin-1
+#   python3 piiScan.py ./searchText.txt
+#   python3 piiScan.py ./searchText.txt --no-mask
+#   python3 piiScan.py ./searchText.txt --max-results 1000
+#   python3 piiScan.py ./searchText.txt --encoding latin-1
 """ 
 FOR EDUCATIONAL USE
 """
