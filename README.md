@@ -1,7 +1,6 @@
 # _workBench_
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b77715ac-4cfe-4dfd-97f4-a0ace894e2ee" />
-
+![image](https://github.com/user-attachments/assets/0e42ed7e-933c-433c-a77a-7cdc1996cd28)
 
 ## Purpose
 
