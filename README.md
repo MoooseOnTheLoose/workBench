@@ -1,5 +1,8 @@
 # _workBench_
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b77715ac-4cfe-4dfd-97f4-a0ace894e2ee" />
+
+
 ## Purpose
 
 `_workBench_` is a personal repository for **learning, experimentation, and diagnostics**.
