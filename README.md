@@ -1,6 +1,7 @@
 # _workBench_
 
-![image](https://github.com/user-attachments/assets/0e42ed7e-933c-433c-a77a-7cdc1996cd28)
+![image](https://github.com/user-attachments/assets/5d391f0b-b4d1-43df-90b9-25fc5b548357)
+
 
 ## Purpose
 
