@@ -35,3 +35,6 @@ Please read **SAFETY.md** before using anything in this repository.
 ## Status
 
 Experimental and evolving.
+
+![image](https://github.com/user-attachments/assets/f35b6521-99bd-4abc-b8d3-abc7913ce04e)
+
