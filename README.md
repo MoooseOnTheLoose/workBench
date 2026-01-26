@@ -39,5 +39,10 @@ Please read **SAFETY.md** before using anything in this repository.
 
 Experimental and evolving.
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/06c0ffcb-930d-481d-9185-a05eba1bed13" />
+![image](https://github.com/user-attachments/assets/a475a8e6-b365-4f53-a792-c7b956af0d81)
+
+
+
+
+
 
